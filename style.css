@@ -1,0 +1,245 @@
+body {
+    text-align: center;
+    overflow-x: hidden;
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+h1 {
+    margin-top: 10px;
+    color: white;
+}
+
+#pauseResumeVideo{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding-bottom: 30px;
+    cursor: pointer;
+    height: 6%;
+}
+
+#clearChosenCoins{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding-bottom: 30px;
+    cursor: pointer;
+    height: 6%;
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 15px;
+        font-weight: bolder;
+        text-align: center;
+        line-height: 0.5;
+        margin-right: 30px;
+        margin-top: 15px;
+    }
+    #pauseResumeVideo {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+    #clearChosenCoins{
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+}
+
+.card {
+    position: relative;
+    border: 5px solid;
+    margin: 15px;
+    padding: 15px;
+    width: fit-content;
+    border-radius: 20px;
+    display: inline-flex;
+    background-image: url(assets/images/cardBackGround.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#coinNameCard, #coinSymbolCard {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.more-info {
+    border: 2px solid;
+    margin-top: 3%;
+    display: none;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    margin-left: 88%;
+    margin-top: -5%;
+    margin-bottom: 3%;
+    font-size: 10px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    margin-top: 10px;
+    height: 2em;
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #9fccfa;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    width: 2em;
+    inset: 0;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.switch input:checked+.slider {
+    background: #0974f1;
+}
+
+.switch input:focus+.slider {
+    box-shadow: 0 0 1px #0974f1;
+}
+
+.switch input:checked+.slider:before {
+    transform: translateX(1.6em);
+}
+
+.card>img {
+    margin: auto;
+    width: 300px !important;
+    height: 220px;
+    margin-top: 10px;
+}
+
+.styleMoreInfo {
+    font-size: x-large;
+    font-weight: bold;
+    height: 120px;
+}
+
+.navbar-custom {
+    background-image: url(assets/images/navBarBackGround.jpg);
+    background-position: center;
+    background-size:auto;
+}
+
+#homeLink, #reportsLink, #aboutLink {
+    font-size: larger;
+    font-weight: bold;
+}
+
+p {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+#noResultsMessage{
+    color: white;
+    margin-top: 10%;
+}
+
+.chosenCoinBtnDiv>button {
+    border: none;
+    background-color: inherit;
+}
+
+.chosenCoinBtnDiv>button>img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    border: 2px solid;
+    margin: auto;
+}
+
+.chosenCoinBtnDiv {
+    margin-bottom: 250px;
+    flex: 1;
+    height: 17px;
+}
+
+#modalContainer {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(assets/images/modalBackGround.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.chosenCoinBtn {
+    font-weight: bold;
+    font-size: larger;
+}
+
+#aboutDiv{
+    border: 10px solid gray;
+    width: 75%;
+    height: 350px;
+    margin-left: 6%;
+    margin-top: 20px;   
+    border-radius: 30px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+h2{
+    color: white;
+    text-align: left;
+}
+
+#aboutMeP{
+    color: white;
+    font-size: large;
+    text-align: left;
+}
+
+#photoAbout{
+    width: 200px;
+    height: 400px;
+    position: relative;
+    /* transform: translateX(-50%); */
+    top: -380px;
+    left: 45%;
+}
+
+.spinner, #modal{
+    display: none;
+}
+
+#cancelBtn{
+    background-color: inherit;
+    border: none;
+    font-size: x-large;
+}
