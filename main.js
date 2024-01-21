@@ -56,7 +56,7 @@
         chosenCoins.clear();
 
         // Uncheck the corresponding checkboxes in the DOM
-        const checkboxes = document.querySelectorAll(".checkBox"); // Replace with your actual checkbox selector
+        const checkboxes = document.querySelectorAll(".checkBox"); 
         checkboxes.forEach((checkbox) => {
             checkbox.checked = false;
         });
@@ -103,16 +103,16 @@
         };
         container.innerHTML = content;  // Merge the code write in the loop into the real HTML code
 
-        // A loop that separates each button that is inside the element of a card (cards), for each click on a certain button, will activate the function.
+        // A loop that separates each button that is inside the element of a card, for each click on a certain button, will activate the function.
         const buttonsMoreInfo = document.querySelectorAll(".card > button")
         for (const buttonToggle of buttonsMoreInfo) {
             buttonToggle.addEventListener("click", toggleMoreInfo);
         };
 
-        // A loop that separates each individual boxCheck that exists from all the boxChecks that exist, every time a boxCheck is clicked(checked), will activate the function.
+        // A loop that separates each individual checkBox that exists from all the checkBoxes that exist, every time a checkBox is clicked(checked), will activate the function.
         const checkedBoxes = document.querySelectorAll(".checkBox");
-        for (const boxCheck of checkedBoxes) {
-            boxCheck.addEventListener("change", favoritesCoins);
+        for (const checkBox of checkedBoxes) {
+            checkBox.addEventListener("change", favoritesCoins);
         };
 
         // Identifying the input of the search, for each change (of a letter) will activate the function
@@ -148,7 +148,7 @@
         const coin = coins[this.getAttribute("data-coin-id")];
         const prices = await getMoreInformation(coin);
 
-        // If element moreInfoDiv is visible, hide it and remove timeout for deletion
+        // If element moreInfoDiv is visible, in the next click, hide it and remove timeout for deletion
         if (moreInfoDiv.style.display === "block") {
             moreInfoDiv.style.display = "none";
             clearTimeout(timeoutIds[coin.name]);
@@ -162,7 +162,7 @@
 
         // Waits for a 1.5 seconds (shows the spinner during this time), and then does the commands within this phenom of time
         setTimeout(() => {
-            // Displaying the correct price
+            // Displaying the correct price via the API
             moreInfoDiv.innerHTML = `
                 <div>USD: ${prices.usd}$</div>
                 <div>EUR: ${prices.eur}€</div>
@@ -254,14 +254,14 @@
             for (const valueFavoriteCoin of chosenCoins) {
                 const coinId = valueFavoriteCoin[0];
                 // Generate buttons for each selected coin in the modal with the iconUrl and the name
-                modalContainer.innerHTML += `<div class="chosenCoinBtnDiv">
+                modalContainer.innerHTML += `<div class="chosenCoinDiv">
                     <button class="chosenCoinBtn" id="${coins[coinId].name}">
                         <img src="${coins[coinId].iconUrl}" class="img-fluid"><br>${coins[coinId].name}
                     </button>
                 </div>`;
             };
 
-            const favoritesCoinsButtons = document.querySelectorAll(".chosenCoinBtnDiv > button");
+            const favoritesCoinsButtons = document.querySelectorAll(".chosenCoinDiv > button");
             let currencyClicked = false;    // Make a flag to check if the user click on some coin from the modal to delete
             let coinToDelete = "";      // An external variable to be used afterwards
             for (const btn of favoritesCoinsButtons) {
@@ -399,7 +399,7 @@
     //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
     // About tab and about functions:
-
+    
     function createAboutInformation() {
         const container = document.getElementById("container");
         // Create about information, includes my photo
@@ -420,6 +420,7 @@
         <img src="assets/images/Me.png" id="photoAbout">`;
     };
 
+    // When the user click on About Tab, what it will do
     function createAbout() {
         // Canceling the ability to see the search box above
         const searchBox = document.getElementById("searchBox");

@@ -229,7 +229,6 @@ h2{
     width: 200px;
     height: 400px;
     position: relative;
-    /* transform: translateX(-50%); */
     top: -380px;
     left: 45%;
 }
