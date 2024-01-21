@@ -343,7 +343,7 @@
         document.getElementById("modal").style.display = "none";
         document.getElementById("myModal").style.display = "none";
         document.getElementById("myModal").classList.remove("show");
-    }
+    };
 
     // Create HTML modal (from BootStrap) and design with my style
     function createModal() {
@@ -404,13 +404,14 @@
         const container = document.getElementById("container");
         // Create about information, includes my photo
         container.innerHTML = `<div id="aboutDiv">
-                <h2>Hi, Welcome to my Digital Coins Project!</h2>
+                <h2>Welcome to my Digital Coins Project!</h2>
                 <hr>
                 <p id="aboutMeP">About me,<br>
-                    Hello, my name is Maayan Pesach. I am 21 years old and living in Yokne'am Illit. I am currently serving in the military due to the ongoing war.<br>
-                    On a daily basis, I work as a computer technician in an agriculture development company. I am someone who loves to enjoy life, and my hobbies mainly include going out, traveling, exploring new places around the world, and creating experiences with friends and family.<br>
-                    Why did I start learning programming (FullStack WEB)? This field fascinates me because it unveils the mystery behind every website or application. Behind every small button, image, or paragraph, there is a function that people don't see, yet they simply enjoy clicking. The programming world, in my eyes, is vast and always evolving, requiring constant exploration. It's a field that I love, and I wanted to deepen my knowledge in it.<br>
-                    After you get to know me a little, I will explain about my project.. This project  deals with around the world of digital coins. On its main page, you can see various digital coins and their values in euros, shekels, and dollars. You can select up to 5 currencies to explore further.<br>
+                    Hello, my name is Maayan Pesach. I am 21 years old, born and raised in Yokne'am Illit. I am currently serving in the military due to the ongoing war.<br>
+                    Daily, I work as a computer technician in an agriculture development company. I am a person who loves to enjoy life, and my hobbies mainly include going out, traveling, exploring new places around the world, and creating experiences with friends and family.<br>
+                    Why did I start learning programming (FullStack WEB)?<br>
+                    This field fascinates me because it unveils the mystery behind every website or application. Behind every small button, image, or paragraph, there is a function that people cannot see, yet they simply enjoy clicking. The programming world, in my point of view, is vast and always evolving, requiring constant exploration. It's a field that I love, and I want to know better about it.<br>
+                    After you get to know me, let me explain to you about my project.. This project deals with the world of digital coins. On its main page, you can see various digital coins and their values in euros, shekels, and dollars. You can select up to 5 currencies to explore further.<br>
                     The project is built using the "Single Page Application" method, which means that when you navigate from page to page (above), the content changes in JS code that is embedded in the HTML depending on the click and the page you selected.<br>
                     In this project, I specifically dealt with programming languages such as JavaScript, HTML, CSS, Bootstrap, and more.<br>
                     Enjoy 😊😊
