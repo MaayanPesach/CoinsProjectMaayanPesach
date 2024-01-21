@@ -171,12 +171,12 @@ p {
     margin-top: 10%;
 }
 
-.chosenCoinBtnDiv>button {
+.chosenCoinDiv>button {
     border: none;
     background-color: inherit;
 }
 
-.chosenCoinBtnDiv>button>img {
+.chosenCoinDiv>button>img {
     width: 100px;
     height: 100px;
     display: block;
@@ -184,7 +184,7 @@ p {
     margin: auto;
 }
 
-.chosenCoinBtnDiv {
+.chosenCoinDiv {
     margin-bottom: 250px;
     flex: 1;
     height: 17px;
